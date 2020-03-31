@@ -27,7 +27,7 @@ body{
 
 .contenedor{
     width: 90%;
-    min-width: 1000px;
+    max-width: 1000px;
     margin: 20px auto;
     /* background-color: aquamarine; */
 
@@ -117,6 +117,7 @@ body{
     grid-area: sidebar;
     background: #ffa41b;
     border: 2px #000000 solid;
+    text-align: center;
 }
 
 .contenedor .sidebar .image{
@@ -132,10 +133,12 @@ body{
 }
 
 .contenedor .sidebar .image figure{
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 400;
     cursor: pointer;
 }
+
+
 
 .contenedor .widget-1,
 .contenedor .widget-2,
@@ -144,7 +147,7 @@ body{
 .contenedor .widget-5{
     background: #00a8cc;
     color: #ffffff;
-    min-height: 30vh;
+    min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,3 +195,42 @@ body{
     color: #ffffff;
 }
 
+
+@media screen and (max-width:850px){
+    .contenedor{
+        grid-template-columns: repeat(autofill,1fr);
+        grid-template-areas: "header        header        header        header        header"
+                             "contenido     contenido     contenido     contenido     contenido"
+                             "sidebar       sidebar       sidebar       sidebar       sidebar"
+                             "widget-1      widget-1      widget-2      widget-2      widget-5"
+                             "widget-3      widget-3      widget-4      widget-4      widget-5"
+                             "footer        footer        footer        footer        footer";
+
+                    
+
+    }
+    
+
+}
+
+
+
+@media screen and (max-width:500px){
+    .contenedor{
+        grid-template-columns: repeat(autofill,1fr);
+        grid-template-areas: "header        header        header        header        header"
+                             "contenido     contenido     contenido     contenido     contenido"
+                             "sidebar       sidebar       sidebar       sidebar       sidebar"
+                             "widget-1      widget-1      widget-1      widget-1      widget-1"
+                             "widget-2      widget-2      widget-2      widget-2      widget-2"
+                             "widget-3      widget-3      widget-3      widget-3      widget-3"
+                             "widget-4      widget-4      widget-4      widget-4      widget-4"
+                             "widget-5      widget-5      widget-5      widget-5      widget-5"
+                             "footer        footer        footer        footer        footer";
+
+                    
+
+    }
+    
+
+}
